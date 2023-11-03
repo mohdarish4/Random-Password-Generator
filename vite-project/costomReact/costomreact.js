@@ -1,1 +1,0 @@
-constmainCostom=document.getElementById("#root")
