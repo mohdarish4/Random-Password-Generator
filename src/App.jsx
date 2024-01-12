@@ -44,19 +44,19 @@ function App() {
   return (
     <>
       <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-8 my-12 text-orange-500 bg-gray-800'>
-        <h1 className='text-white text-center my-3'>Password Generator</h1>
+        <h1 className='text-white text-center my-6 ml-20 mr-20 rounded-full bg-gradient-to-r from-orange-400 via-red-500 to-pink-500'>Password Generator</h1>
         <div className='className="flex shadow rounded-lg overflow-hidden mb-4"'>
           <input
           type="text"
           value={Password}
-          className='outline-none w-5/6 py-1 px-3 mb-2 mr-2'
+          className='outline-none w-5/6 py-1 px-3 mb-2 mr-2 rounded-full'
           placeholder='Password'
           readOnly
           ref={passwordRef}
           />
           <button 
           onClick={copyPasswordToClipboard}
-          className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0 rounded-lg'>copy</button>
+          className='outline-none bg-sky-500 hover:bg-sky-700 text-white px-3 py-0.5 shrink-0 rounded-lg border-2 inline-block align-baseline'>copy</button>
         </div>
         <div className='flex text-sm gap-x-2'>
           <div className='flex items-center gap-x-1'>
@@ -74,24 +74,26 @@ function App() {
           <div className='flex item-center gap-x-1'>
             <input
             type='checkbox'
+            className='cursor-pointer'
             defaultChecked={numberAllowed}
             id="numberInput"
             onChange={() => {
               setNumberAllowed((prev) => !prev);
             }}
             />
-            <label htmlFor="nimberInput">Number</label>
+            <label htmlFor="numberInput">Number</label>
           </div>
           <div className='flex item-center gap-x-1'>
             <input
             type='checkbox'
+            className='cursor-pointer'
             defaultChecked={numberAllowed}
             id="numberInput"
             onChange={() => {
               setNumberAllowed((prev) => !prev);
             }}
             />
-            <label htmlFor="nimberInput">Character</label>
+            <label htmlFor="numberInput">Character</label>
             </div>
         </div>
       </div>
